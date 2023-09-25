@@ -5,6 +5,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import model.entities.Account;
+import model.exceptions.BusinessException;
 
 public class Program {
 
@@ -33,7 +34,7 @@ public class Program {
 			account.withdraw(withdraw);
 			System.out.println("New Balance: " + String.format("%.2f", account.getBalance()));
 		}
-		catch (IllegalArgumentException e) {
+		catch (BusinessException e) {
 			System.out.println("Withdraw error: " + e.getMessage());		
 		}
 		catch (InputMismatchException e) {
