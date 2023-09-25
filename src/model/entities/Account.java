@@ -53,7 +53,7 @@ public class Account {
 			throw new IllegalArgumentException ("The amount exceeds withdraw limit");
 		}
 		if(amount > balance) {
-			throw new IllegalArgumentException("The amount exceeds withdraw limit");
+			throw new IllegalArgumentException("Not enough balance");
 		}
 		else {
 			balance -= amount;
